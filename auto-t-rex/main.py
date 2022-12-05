@@ -10,7 +10,7 @@ mon = {
      'width': 800,
      'height': 200
 }
-sct = mss()                                          
+mss = mss()                                          
 font = cv2.FONT_HERSHEY_SIMPLEX
 bottomLeftCornerOfText = (50,50) 
 fontScale = 1
@@ -21,8 +21,8 @@ count = 0
 last_count = 0
 
 while True:
-     sct.get_pixels(mon)
-     img = Image.frombytes('RGB', (sct.width, sct.height), sct.image)
+     mss.get_pixels(mon)
+     img = Image.frombytes('RGB', (mss.width, mss.height), mss.image)
      img_arr = np.array(img)
      obj = img_arr[125:155 , 110:155]
      gray = cv2.cvtColor(obj, cv2.COLOR_BGR2GRAY)  
