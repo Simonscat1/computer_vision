@@ -26,7 +26,7 @@ while True:
      img_arr = np.array(img)
      obj = img_arr[125:155 , 110:155]
      gray = cv2.cvtColor(obj, cv2.COLOR_BGR2GRAY)  
-     th, threshed = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV|cv2.THRESH_OTSU) 
+     th, threshed = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU) 
      cnts = cv2.findContours(threshed, cv2.RETR_LIST,cv2.CHAIN_APPROX_SIMPLE)[-2] 
      count = len(cnts)
      if count >= 1:

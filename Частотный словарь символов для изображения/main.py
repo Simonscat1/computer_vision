@@ -71,7 +71,6 @@ binary = np.sum(image, 2)
 binary[binary > 0] = 1
 
 labeled = label(binary)
-#print(np.max(labeled))
 
 regions = regionprops(labeled)
 
