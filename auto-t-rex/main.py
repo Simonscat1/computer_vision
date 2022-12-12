@@ -30,6 +30,8 @@ while True:
      cnts = cv2.findContours(threshed, cv2.RETR_LIST,cv2.CHAIN_APPROX_SIMPLE)[-2] 
      count = len(cnts)
      if count >= 1:
+          print("Прыжок")
+          p.press('space')
           p.press('space')
      cv2.putText(img_arr,str(count), bottomLeftCornerOfText, font, fontScale,fontColor, lineType)
      cv2.imshow('test1', np.array(img_arr))
